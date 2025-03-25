@@ -1,0 +1,53 @@
+fhir_patient:
+  columns:
+    address: Endereço do paciente.
+    birth_date: Data de nascimento do paciente.
+    full_name: Nome completo do paciente (primeiro nome + sobrenome).
+    gender: Gênero do paciente.
+    id: Identificador único gerado a partir dos atributos do paciente.
+    insurance_number: Número do seguro de saúde do paciente.
+    marital_status: Estado civil do paciente.
+    nationality: Nacionalidade do paciente.
+    telecom: Campo JSON contendo informações de contato, incluindo telefone e email.
+  description: "\n                Tabela transformada para o formato FHIR, contendo\
+    \ os dados essenciais do paciente organizados de maneira padronizada \n      \
+    \          para interoperabilidade no setor de saúde. A tabela inclui um identificador\
+    \ único, nome completo, dados de contato no formato JSON e outras informações\
+    \ essenciais.\n            "
+  tests:
+  - Verificar se o campo telecom contém um JSON válido.
+  - Assegurar que o nome completo foi corretamente concatenado.
+  - Garantir que o identificador único está sendo gerado corretamente.
+raw_patient:
+  columns:
+    address: Endereço residencial do paciente.
+    allergies: Lista de alergias do paciente.
+    birth_date: Data de nascimento do paciente.
+    blood_type: Tipo sanguíneo do paciente.
+    city: Cidade onde o paciente reside.
+    created_at: Data e hora da criação do registro.
+    email: Endereço de email do paciente.
+    emergency_contact_name: Nome da pessoa de contato em caso de emergência.
+    emergency_contact_phone: Telefone da pessoa de contato em caso de emergência.
+    first_name: Primeiro nome do paciente.
+    gender: Gênero do paciente.
+    id: Identificador único do paciente (chave primária).
+    insurance_number: Número do seguro de saúde do paciente.
+    insurance_provider: Fornecedor de seguro saúde do paciente.
+    last_name: Sobrenome do paciente.
+    last_visit_date: Data da última visita do paciente.
+    marital_status: Estado civil do paciente.
+    nationality: Nacionalidade do paciente.
+    phone_number: Número de telefone do paciente.
+    preferred_language: Idioma preferido pelo paciente.
+    state: Estado onde o paciente reside.
+    updated_at: Data e hora da última atualização do registro.
+    zip_code: Código postal do paciente.
+  description: "\n                Tabela contendo os dados brutos dos pacientes, diretamente\
+    \ importados do CSV fornecido. \n                Esta tabela contém informações\
+    \ pessoais, dados de contato, informações médicas e dados de seguro dos pacientes\
+    \ antes de qualquer transformação.\n            "
+  tests:
+  - Verificar se todas as colunas obrigatórias estão presentes.
+  - Validar se os emails possuem um formato correto.
+  - Garantir que nenhum campo crítico está vazio após a ingestão.
