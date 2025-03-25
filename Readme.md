@@ -41,12 +41,12 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
 1. **Crie um arquivo `.env`** na raiz do projeto com as variáveis de ambiente necessárias para o banco de dados. Exemplo:
 
    ```env
-   DB_NAME=patient_db
-   DB_USER=postgres
-   DB_PASSWORD=ROOT
-   DB_HOST=localhost
-   DB_PORT=5432
+   DB_NAME=DB_NAME
+   DB_USER=DB _USER
+   DB_PASSWORD=DB_PASSWORD
+   DB_HOST=DB_HOST
+   DB_PORT=DB_PORT
 
    # Banco de dados de testes
-   DB_NAME_TEST=test_patient_db
+   DB_NAME_TEST=DB_NAME_TEST
    ```
